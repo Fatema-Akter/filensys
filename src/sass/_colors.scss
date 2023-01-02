@@ -1,10 +1,14 @@
 $Blue: #0b137c;
 $Green: #139487;
 $Yellow: #FFB100;
+$White: #ffffff;
 
 
 .bg-green{
     background: $Green;
+}
+.bg-white{
+    background-color: $White;
 }
 .blue-color{
     color: $Blue;

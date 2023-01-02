@@ -6,8 +6,34 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Kurale', serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 28px;
+}
+h5{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+h4{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+h3{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+}
+h2{
+    text-transform: uppercase;
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+h1{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 2.7rem;
 }
 
 
@@ -37,4 +63,23 @@ body {
     border-radius: 50%;
     border: 2px solid $Yellow;
     color: $Blue;
+}
+
+//banner area
+.banner-section{
+    background: linear-gradient(to right, rgba($Green,.75),rgba($Green,.75));
+    min-height: calc(100vh);
+    padding: 100px 0px;
+}
+
+//operational framework
+.operational-framework{
+    min-height: calc(100vh);
+    padding: 100px 0px;
+}
+
+//key satisfaction
+.key-satisfaction{
+    min-height: calc(100vh);
+    padding: 100px 0px;
 }
