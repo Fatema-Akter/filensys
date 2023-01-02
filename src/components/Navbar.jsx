@@ -1,6 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../images/logo.png';
+//fontawesome icon
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 class Navbar extends React.Component{
     constructor(props){
@@ -11,13 +15,13 @@ class Navbar extends React.Component{
         return(
             <nav className="navbar navbar-expand-lg">
                     <NavLink className="navbar-brand logo" to="/">
-                        <img src={Logo}  alt="logo" style={{height: "100px", width: "100px"}} />
+                        <img src={Logo}  alt="logo" />
                     </NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <ul className="navbar-nav mb-2 mb-lg-0 ms-auto center">
                             <li className="nav-item">
                                 <NavLink exact className="nav-link" aria-current="page" to="/" activeClassName="active">Home</NavLink>
                             </li>
@@ -33,7 +37,16 @@ class Navbar extends React.Component{
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/contact-us" activeClassName="active">Contact Us</NavLink>
                             </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link nav-link-login" to="/login" activeClassName="active">Login</NavLink>
+                            </li>
                         </ul>
+                    </div>
+                    <div className="login-user">
+                        <NavLink className="nav-link" to="/login" activeClassName="active">
+                            <FontAwesomeIcon icon={faUser} className="user-circle" />
+                        </NavLink>
+                    
                     </div>
             </nav>
         );

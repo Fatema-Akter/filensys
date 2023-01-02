@@ -6,6 +6,8 @@ import {BrowserRouter} from 'react-router-dom';
 //bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+//sass
+import "./sass/main.scss";
 
 
   ReactDOM.render(

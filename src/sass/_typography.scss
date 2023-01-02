@@ -1,0 +1,40 @@
+@import "./colors";
+
+
+//typography
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Kurale', serif;
+    font-size: 1rem;
+    line-height: 28px;
+}
+
+
+//navbar
+.navbar{
+    padding: 0px;
+    font-weight: 500;
+}
+.nav-link{
+    color: $Blue;
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: $Blue;
+}
+.navbar-nav .nav-link:hover{
+    color: $Blue;
+}
+.logo {
+    height: 70px;
+    width: 100px;
+}
+.logo img {
+    width: 100%;
+}
+.user-circle{
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid $Yellow;
+    color: $Blue;
+}

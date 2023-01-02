@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
+import Login from './components/login';
 
 
 class App extends React.Component{
@@ -21,6 +22,7 @@ class App extends React.Component{
                   <Route exact path="/services" component={Services} />
                   <Route exact path="/portfolio" component={Portfolio} />
                   <Route exact path="/contact-us" component={Contact} />
+                  <Route exact path="/login" component={Login} />
               </Switch>
             </div>
         );

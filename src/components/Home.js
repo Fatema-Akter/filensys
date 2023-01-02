@@ -3,8 +3,13 @@ import Header from "./Navbar";
 
 function Home() {
     return (
-        <div>
-            <Header />
+        <div className="home-page">
+            <div className="bg-green header-section">
+                <div className="container">
+                <Header /> 
+                </div>
+                   
+            </div>
         </div>
     );
   }
