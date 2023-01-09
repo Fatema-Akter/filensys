@@ -1,0 +1,19 @@
+@import "./mixin";
+
+//card
+.card {
+    background-color: $White;
+    border: 1px solid $Wheat;
+    border-radius: var(--bs-card-border-radius);
+    @include transitions(all 0.9s ease-in-out);
+    @include transforms(scale(0.9));
+}
+.card:hover{
+    @include transforms(scale(1));
+}
+.card-redesign .card{
+    background-color: $Wheat;
+}
+.card-redesign .list-group-item{
+    background-color: $Wheat;
+}

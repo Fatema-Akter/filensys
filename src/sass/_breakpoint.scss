@@ -4,11 +4,51 @@
         visibility: hidden;
         display: none;
     }
+    h4{
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+    h3{
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+    h2{
+        text-transform: uppercase;
+        line-height: 30px;
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+    }
+    h1{
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+    .left, .right{
+        float: none;
+        text-align: center;
+    }
+    .font-12{
+        font-size: 8px;
+    }
+    .h-right{
+        visibility: hidden;
+        display: none;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .login-user{
+        visibility: hidden;
+        display: none;
+    }
+    .left, .right{
+        float: none;
+        text-align: center;
+    }
+    .h-right{
         visibility: hidden;
         display: none;
     }
@@ -19,6 +59,10 @@
     .login-user{
         visibility: hidden;
         display: none;
+    }
+    .h-right{
+        visibility: visible;
+        display: block;
     }
 }
 
@@ -31,6 +75,7 @@
     .nav-link-login{
         display: none;
     }
+    //center menubar for desktop view
     .center{
         justify-content: center;
         display: "flex";

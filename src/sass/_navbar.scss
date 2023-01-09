@@ -1,0 +1,75 @@
+@import "./mixin";
+//navbar
+
+.navbar{
+    padding: 0px;
+    font-weight: 500;
+    background: $White;
+    text-align: center;
+}
+.nav-link{
+    color: $Blue;
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: $Blue;
+}
+.navbar-nav .nav-link:hover{
+    color: $Blue;
+}
+.logo {
+    height: 70px;
+    width: 100px;
+    margin-left: 10px;
+}
+.logo img {
+    width: 100%;
+}
+.login-user{
+    margin-right: 10px;
+}
+.user-circle{
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid $Yellow;
+    color: $Blue;
+}
+
+// underlining for active menu item
+.navbar .navbar-nav .nav-item .nav-link{
+    position: relative;
+    display: block;
+    padding-bottom: 2px;
+}
+.navbar .navbar-nav .nav-item .nav-link::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $Yellow;
+    visibility: hidden;
+    @include transitions (all 0.3s ease-in-out 0s);
+    @include transforms (scale(0));
+}
+.navbar .navbar-nav .nav-item .nav-link:hover::before{
+    visibility: visible;
+    @include transforms (scale(1));
+}
+.navbar .navbar-nav .nav-item .nav-link.active::before
+{
+    visibility: visible;
+    @include transforms (scale(1));
+    background-color: $Yellow;
+}
+//modify navbar toggler icon
+.navbar-toggler {
+    border-color: $Yellow;
+    margin-right: 10px;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(11,19,124, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.01rem;
+}

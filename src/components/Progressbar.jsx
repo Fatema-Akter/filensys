@@ -5,7 +5,14 @@ import {
   } from "react-circular-progressbar";
   import "react-circular-progressbar/dist/styles.css";
 
-  const percentage = 71;
+
+// Animation
+import { easeQuadInOut } from "d3-ease";
+import AnimatedProgressProvider from "./AnimatedProgressProvider";
+
+const percentage1 = 71;
+const percentage2 = 85;
+const percentage3 = 79;
 
   class Progressbar extends React.Component{
     constructor(props){
@@ -15,63 +22,103 @@ import {
     render(){
         return(
             <div>
-                <div>
-                    <div className="row p-5">
-                        <div className="col-4">
-                            <div className="bg-white">
+                <div class="row">
+                    {/* item 1 */}
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
                                 <div className="p-5">
-                                    <CircularProgressbar
-                                        value={percentage}
-                                        text={`${percentage}%`}
-                                        background
-                                        backgroundPadding={6}
+                                <AnimatedProgressProvider
+                                    valueStart={0}
+                                    valueEnd={percentage1}
+                                    duration={2}
+                                    easingFunction={easeQuadInOut}
+                                    
+                                >
+                                    {value => {
+                                    const roundedValue = Math.round(value);
+                                    return (
+                                        <CircularProgressbar
+                                        value={value}
+                                        text={`${roundedValue}%`}
+                                        strokeWidth={5}
                                         styles={buildStyles({
-                                        backgroundColor: "#3e98c7",
-                                        textColor: "#fff",
-                                        pathColor: "#fff",
-                                        trailColor: "transparent"
-                                        })}
-                                    />
+                                            textColor: "#0b137c",
+                                            pathColor: "#FFB100",
+                                            trailColor: "#dfe0eb"
+                                          })}
+                                        />
+                                    );
+                                    }}
+                                </AnimatedProgressProvider>
                                 </div>
-                                <h4 className="text-center pb-5">Job satisfaction</h4>
+                                <h5 class="card-title text-center">Job satisfaction</h5>
                             </div>
                         </div>
-                        <div className="col-4">
-                            <div className="bg-white">
+                    </div>
+                    {/* item 2 */}
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
                                 <div className="p-5">
-                                    <CircularProgressbar
-                                        value={percentage}
-                                        text={`${85}%`}
-                                        background
-                                        backgroundPadding={6}
+                                <AnimatedProgressProvider
+                                    valueStart={0}
+                                    valueEnd={percentage2}
+                                    duration={2}
+                                    easingFunction={easeQuadInOut}
+                                        
+                                >
+                                {value => {
+                                const roundedValue = Math.round(value);
+                                return (
+                                        <CircularProgressbar
+                                        value={value}
+                                        text={`${roundedValue}%`}
+                                        strokeWidth={5}
                                         styles={buildStyles({
-                                        backgroundColor: "#3e98c7",
-                                        textColor: "#fff",
-                                        pathColor: "#fff",
-                                        trailColor: "transparent"
+                                        textColor: "#0b137c",
+                                        pathColor: "#FFB100",
+                                        trailColor: "#dfe0eb"
                                         })}
                                     />
+                                );
+                                }}
+                                </AnimatedProgressProvider>
                                 </div>
-                                <h4 className="text-center pb-5">growth rate</h4>
+                                <h5 class="card-title text-center">Job satisfaction</h5>
                             </div>
                         </div>
-                        <div className="col-4">
-                            <div className="bg-white">
+                    </div>
+                    {/* item 3 */}
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
                                 <div className="p-5">
-                                    <CircularProgressbar
-                                        value={percentage}
-                                        text={`${79}%`}
-                                        background
-                                        backgroundPadding={6}
+                                <AnimatedProgressProvider
+                                    valueStart={0}
+                                    valueEnd={percentage3}
+                                    duration={2}
+                                    easingFunction={easeQuadInOut}
+                                    
+                                >
+                                    {value => {
+                                    const roundedValue = Math.round(value);
+                                    return (
+                                        <CircularProgressbar
+                                        value={value}
+                                        text={`${roundedValue}%`}
+                                        strokeWidth={5}
                                         styles={buildStyles({
-                                        backgroundColor: "#3e98c7",
-                                        textColor: "#fff",
-                                        pathColor: "#fff",
-                                        trailColor: "transparent"
-                                        })}
-                                    />
+                                            textColor: "#0b137c",
+                                            pathColor: "#FFB100",
+                                            trailColor: "#dfe0eb"
+                                          })}
+                                        />
+                                    );
+                                    }}
+                                </AnimatedProgressProvider>
                                 </div>
-                                <h4 className="text-center pb-5">client satisfaction</h4>
+                                <h5 class="card-title text-center">Job satisfaction</h5>
                             </div>
                         </div>
                     </div>

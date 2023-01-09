@@ -1,0 +1,44 @@
+@import "./mixin";
+
+//yellow button
+.btn-blue {
+    text-transform: uppercase;
+    color: $White;
+    font-weight: 500;
+    background: $Blue;
+    border: 2px solid $Yellow;
+    padding: 13px 30px;
+    @include transitions(all 0.9s ease-in-out);
+    @include transforms(scale(0.9));
+  }
+  .btn-blue:hover {
+    color: $Blue;
+    border: 2px solid $Blue;
+    background: $Yellow;
+    @include transforms(scale(1));
+  }
+  .btn-blue:focus {
+    box-shadow: none;
+  } 
+
+
+  //blue button
+  .btn-yellow {
+    text-transform: uppercase;
+    color: $White;
+    font-weight: 500;
+    background: $Yellow;
+    border: 2px solid $Blue;
+    padding: 13px 30px;
+    @include transitions(all 0.9s ease-in-out);
+    @include transforms(scale(0.9));
+  }
+  .btn-yellow:hover {
+    color: $Yellow;
+    border: 2px solid $Yellow;
+    background: $Blue;
+    @include transforms(scale(1));
+  }
+  .btn-yellow:focus {
+    box-shadow: none;
+  }

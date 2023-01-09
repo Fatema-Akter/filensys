@@ -7,7 +7,6 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Login from './components/login';
 
-
 class App extends React.Component{
     constructor(props){
         super(props);

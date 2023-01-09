@@ -1,15 +1,29 @@
 $Blue: #0b137c;
-$Green: #139487;
+$Black: #000000;
 $Yellow: #FFB100;
 $White: #ffffff;
+$Wheat: #f5deb3;
+$LightBlue: #dfe0eb;
 
 
-.bg-green{
-    background: $Green;
-}
 .bg-white{
     background-color: $White;
 }
+.bg-lightblue{
+    background-color: $LightBlue;
+}
+.bg-wheat{
+    background-color: $Wheat;
+}
 .blue-color{
     color: $Blue;
+}
+.white-color{
+    color: $White;
+}
+.yellow-color{
+    color: $Yellow;
+}
+.wheat-color{
+    color: $Wheat;
 }
