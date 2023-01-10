@@ -73,7 +73,9 @@
         display: block;
     }
     .nav-link-login{
-        display: none;
+        display: block;
+        visibility: hidden;
+        content: none;
     }
     //center menubar for desktop view
     .center{
@@ -86,5 +88,19 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+    .login-user{
+        visibility: visible;
+        display: block;
+    }
+    .nav-link-login{
+        display: none;
+        visibility: hidden;
+    }
+    //center menubar for desktop view
+    .center{
+        justify-content: center;
+        display: "flex";
+        flex: 1;
+        align-items: center;
+    }
 }

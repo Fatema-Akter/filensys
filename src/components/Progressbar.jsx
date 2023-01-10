@@ -85,7 +85,7 @@ const percentage3 = 79;
                                 }}
                                 </AnimatedProgressProvider>
                                 </div>
-                                <h5 class="card-title text-center">Job satisfaction</h5>
+                                <h5 class="card-title text-center">Growth Rate</h5>
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ const percentage3 = 79;
                                     }}
                                 </AnimatedProgressProvider>
                                 </div>
-                                <h5 class="card-title text-center">Job satisfaction</h5>
+                                <h5 class="card-title text-center">Client Satisfaction</h5>
                             </div>
                         </div>
                     </div>
